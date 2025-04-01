@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1FEA37E22D9C03AC00F6D56C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEA37C62D9C027E00F6D56C /* WidgetKit.framework */; };
+		1FEA37E32D9C03AC00F6D56C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FEA37C82D9C027F00F6D56C /* SwiftUI.framework */; };
+		1FEA37EF2D9C03AC00F6D56C /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1FEA37E12D9C03AC00F6D56C /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1FEA37A12D9C019D00F6D56C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +27,47 @@
 			remoteGlobalIDString = 1FEA378E2D9C019C00F6D56C;
 			remoteInfo = clippy;
 		};
+		1FEA37ED2D9C03AC00F6D56C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FEA37872D9C019C00F6D56C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FEA37E02D9C03AC00F6D56C;
+			remoteInfo = widgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1FEA37DC2D9C027F00F6D56C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1FEA37EF2D9C03AC00F6D56C /* widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1FEA378F2D9C019C00F6D56C /* clippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEA37A02D9C019D00F6D56C /* clippyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clippyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEA37AA2D9C019D00F6D56C /* clippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FEA37C62D9C027E00F6D56C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1FEA37C82D9C027F00F6D56C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		1FEA37E12D9C03AC00F6D56C /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1FEA37F02D9C03AC00F6D56C /* Exceptions for "widget" folder in "widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1FEA37E02D9C03AC00F6D56C /* widgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1FEA37912D9C019C00F6D56C /* clippy */ = {
@@ -43,6 +83,14 @@
 		1FEA37AD2D9C019D00F6D56C /* clippyUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = clippyUITests;
+			sourceTree = "<group>";
+		};
+		1FEA37E42D9C03AC00F6D56C /* widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1FEA37F02D9C03AC00F6D56C /* Exceptions for "widget" folder in "widgetExtension" target */,
+			);
+			path = widget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +117,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FEA37DE2D9C03AC00F6D56C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FEA37E32D9C03AC00F6D56C /* SwiftUI.framework in Frameworks */,
+				1FEA37E22D9C03AC00F6D56C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +135,8 @@
 				1FEA37912D9C019C00F6D56C /* clippy */,
 				1FEA37A32D9C019D00F6D56C /* clippyTests */,
 				1FEA37AD2D9C019D00F6D56C /* clippyUITests */,
+				1FEA37E42D9C03AC00F6D56C /* widget */,
+				1FEA37C52D9C027E00F6D56C /* Frameworks */,
 				1FEA37902D9C019C00F6D56C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +147,18 @@
 				1FEA378F2D9C019C00F6D56C /* clippy.app */,
 				1FEA37A02D9C019D00F6D56C /* clippyTests.xctest */,
 				1FEA37AA2D9C019D00F6D56C /* clippyUITests.xctest */,
+				1FEA37E12D9C03AC00F6D56C /* widgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1FEA37C52D9C027E00F6D56C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FEA37C62D9C027E00F6D56C /* WidgetKit.framework */,
+				1FEA37C82D9C027F00F6D56C /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +171,12 @@
 				1FEA378B2D9C019C00F6D56C /* Sources */,
 				1FEA378C2D9C019C00F6D56C /* Frameworks */,
 				1FEA378D2D9C019C00F6D56C /* Resources */,
+				1FEA37DC2D9C027F00F6D56C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1FEA37EE2D9C03AC00F6D56C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1FEA37912D9C019C00F6D56C /* clippy */,
@@ -163,6 +234,28 @@
 			productReference = 1FEA37AA2D9C019D00F6D56C /* clippyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1FEA37E02D9C03AC00F6D56C /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FEA37F12D9C03AC00F6D56C /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				1FEA37DD2D9C03AC00F6D56C /* Sources */,
+				1FEA37DE2D9C03AC00F6D56C /* Frameworks */,
+				1FEA37DF2D9C03AC00F6D56C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1FEA37E42D9C03AC00F6D56C /* widget */,
+			);
+			name = widgetExtension;
+			packageProductDependencies = (
+			);
+			productName = widgetExtension;
+			productReference = 1FEA37E12D9C03AC00F6D56C /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +277,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 1FEA378E2D9C019C00F6D56C;
 					};
+					1FEA37E02D9C03AC00F6D56C = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 1FEA378A2D9C019C00F6D56C /* Build configuration list for PBXProject "clippy" */;
@@ -203,6 +299,7 @@
 				1FEA378E2D9C019C00F6D56C /* clippy */,
 				1FEA379F2D9C019D00F6D56C /* clippyTests */,
 				1FEA37A92D9C019D00F6D56C /* clippyUITests */,
+				1FEA37E02D9C03AC00F6D56C /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +320,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1FEA37A82D9C019D00F6D56C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FEA37DF2D9C03AC00F6D56C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +357,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FEA37DD2D9C03AC00F6D56C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +376,11 @@
 			isa = PBXTargetDependency;
 			target = 1FEA378E2D9C019C00F6D56C /* clippy */;
 			targetProxy = 1FEA37AB2D9C019D00F6D56C /* PBXContainerItemProxy */;
+		};
+		1FEA37EE2D9C03AC00F6D56C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FEA37E02D9C03AC00F6D56C /* widgetExtension */;
+			targetProxy = 1FEA37ED2D9C03AC00F6D56C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -509,6 +625,62 @@
 			};
 			name = Release;
 		};
+		1FEA37F22D9C03AC00F6D56C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A2LUQ99MY2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = thunting.clippy.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1FEA37F32D9C03AC00F6D56C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A2LUQ99MY2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = thunting.clippy.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -544,6 +716,15 @@
 			buildConfigurations = (
 				1FEA37BB2D9C019D00F6D56C /* Debug */,
 				1FEA37BC2D9C019D00F6D56C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FEA37F12D9C03AC00F6D56C /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FEA37F22D9C03AC00F6D56C /* Debug */,
+				1FEA37F32D9C03AC00F6D56C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
