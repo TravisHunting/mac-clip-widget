@@ -12,6 +12,12 @@ struct clippyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onOpenURL { url in
+                    // Handle URL scheme calls from widget
+                    if url.scheme == "clippy" && url.host == "screenshot" {
+                        ScreenshotManager.takeScreenshotAndCopyToClipboard()
+                    }
+                }
         }
     }
 }

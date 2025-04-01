@@ -55,6 +55,15 @@ struct widgetEntryView : View {
 
             Text("Emoji:")
             Text(entry.emoji)
+            
+            // Add button to trigger screenshot
+            Link(destination: URL(string: "clippy://screenshot")!) {
+                Text("Take Screenshot")
+                    .padding(8)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
         }
     }
 }
