@@ -53,7 +53,7 @@ struct widgetEntryView : View {
                 Text(entry.date, style: .time)
             }
 
-            Text("TEST EMOJI:")
+            Text("EMOJI 1:")
             Text(entry.emoji)
             
             // Add button to trigger screenshot
@@ -82,7 +82,7 @@ struct widget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("My Widget 1")
+        .description("This is an example widget. 1")
     }
 }
