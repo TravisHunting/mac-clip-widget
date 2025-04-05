@@ -53,12 +53,12 @@ struct widgetEntryView : View {
                 Text(entry.date, style: .time)
             }
 
-            Text("Emoji:")
+            Text("TEST EMOJI:")
             Text(entry.emoji)
             
             // Add button to trigger screenshot
             Link(destination: URL(string: "clippy://screenshot")!) {
-                Text("Take Screenshot")
+                Text("Take Fullscreen Screenshot")
                     .padding(8)
                     .background(Color.blue)
                     .foregroundColor(.white)
